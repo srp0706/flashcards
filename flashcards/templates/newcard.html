@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+New card
+{% endblock %}
+
+{% block body %}
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-sm"><label for="imgfile">Image file</label></div>
+        <div class="col-lg"><input type="file" name="imgfile" id="imgfile" required></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm"><label for="desc">Description</label></div>
+        <div class="col-lg"><input type="text" name="desc" id="desc" required></div>
+    </div><br>
+    <div class="row">
+        <div class="col-sm"><label for="note">Notes</label></div>
+        <div class="col-lg"><textarea style="height: 10em;" name="note" id="note"></textarea></div>
+    </div><br>
+    <div class="text-center">
+        <input type="submit" value="Insert">
+    </div>
+</form>
+{% endblock %}

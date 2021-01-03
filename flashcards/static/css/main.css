@@ -1,0 +1,88 @@
+@font-face {
+    font-family: chines;
+    src: url('../fonts/NotoSerifTC-Medium.otf') format('opentype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: regularfont;
+    src: url('../fonts/Andika-R.ttf')
+}
+body {
+    font-family: regularfont;
+    font-size: 1.5em;
+}
+button {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+div {
+    display: grid;
+    align-items: center;
+    margin: 0 auto;
+}
+img {
+    border-radius: 4px;
+}
+input[type=text] {
+    width: 100%;
+    font-size: 1.5em;
+    resize: none;
+}
+input[type=submit] {
+    width: 25%;
+    align-self: center;
+    align-content: center;
+}
+label {
+    display: inline-block;
+}
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+.card {
+    display: inline-block;
+    background-color: dimgray;
+    border-radius: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    min-height: 350px;
+}
+.card-prim {
+    display: inline-block;
+    width: 100%;
+    font-family: chines, serif;    
+    font-size: 1.5em;
+    font-weight: 500;
+    font-variant-east-asian: traditional;
+    background-color: lightgray;
+    border-radius: 4px;
+}
+.card-sec {
+    font-size: 0.5em;
+}
+.centered {
+    display: flex; 
+    justify-content: center;
+    margin: 0 auto;
+}
+.col-sm {
+    float: left;
+    width: 20%;
+}
+.col-lg {
+    float: left;
+    width: 70%;
+}
+.container {
+    display: inline;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}

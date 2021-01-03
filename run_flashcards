@@ -1,0 +1,8 @@
+#!/bin/bash
+export FLASK_APP=flashcards
+export FLASK_ENV=development
+if [ -f flashcards.sqlite ]; then
+    echo "Database does not exist, setting up..."
+    flask init-db; 
+fi
+flask run

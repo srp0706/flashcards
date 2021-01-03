@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+All cards
+{% endblock %}
+
+{% block body %}
+    <script type="text/javascript">
+        var imgnode=null;
+    </script>
+    <div class="container">
+        {% for card in cards %}
+        <div class="card">
+            <div style="width: 200px;" class="text-center">
+                <span class="card-sec">{{ card['item'] }}</span><br>
+                <span><img width=200px height=200px style="object-fit: scale-down;" id="img{{ card['item'] }}" src="" /></span><br>
+                <span class="card-prim">{{ card['desc'] }}</span><br>
+                <span class="card-sec">{{ card['note'] }}</span>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // console.log("img{{ card['item'] }} has "+prepImage("{{card['pic']}}").length+" characters.");
+            imgnode=document.getElementById("img{{ card['item'] }}");
+            imgnode.src="data:image/*;base64,"+"{{ card['pic'] }}".replace("b&#39;","").replace("&#39;","");
+            imgnode.alt="img{{ card['item'] }}";
+        </script>
+        {% endfor %}    
+    </div>
+{% endblock %}

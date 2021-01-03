@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Random card
+{% endblock %}
+
+{% block body %}
+    <script type="text/javascript">
+        var imgnode=null;
+    </script>
+    <div>
+        <div class="card centered" style="width: 400px;">
+            <div class="text-center">
+                <span class="card-sec">{{ card['item'] }}</span><br>
+                <span><img width=200px id="img{{ card['item'] }}" src="" /></span><br>
+                <span id="answer1" class="card-prim">&nbsp;</span><br>
+                <span id="answer2" class="card-sec">&nbsp;</span>
+            </div>
+        </div>
+        <div class="centered" style="width: 400px">
+            <button id="showAnswer">Show answer!</button>
+            <button id="anotherCard">Another card</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+        imgnode=document.getElementById("img{{ card['item'] }}");
+        imgnode.src="data:image/*;base64,"+"{{ card['pic'] }}".replace("b&#39;","").replace("&#39;","");
+        imgnode.alt="img{{ card['item'] }}";
+        let btnShowAnswer=document.getElementById("showAnswer");
+        let btnAnotherCard=document.getElementById("anotherCard");
+        btnShowAnswer.addEventListener("click", function() {
+            document.getElementById("answer1").innerHTML="{{ card['desc'] }}";
+            document.getElementById("answer2").innerHTML="{{ card['note'] }}";
+        });
+        btnAnotherCard.addEventListener("click", function() {
+            document.location.reload(true);
+        });
+    </script>
+{% endblock %}

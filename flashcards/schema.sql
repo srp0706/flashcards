@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS flashcards;
+
+CREATE TABLE IF NOT EXISTS flashcards(
+    item INTEGER NOT NULL UNIQUE PRIMARY KEY,
+    pic  BLOB    NOT NULL,
+    desc TEXT    NOT NULL,
+    note TEXT
+);

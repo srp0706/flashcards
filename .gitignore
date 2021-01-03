@@ -1,0 +1,7 @@
+flashcards/flashcards.sqlite
+flashcards/flashcards.sqlite.7z
+
+*.pyc
+flashcards/__pycache__/
+
+.vscode/

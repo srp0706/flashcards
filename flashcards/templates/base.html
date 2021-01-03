@@ -1,0 +1,10 @@
+<!doctype html>
+<title>{% block title %}{% endblock %} - flashcards</title>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="text-right"><a href="{{ url_for('index') }}">Index</a></div>
+    <hr>
+    {% block body %}{% endblock %}
+</body>
