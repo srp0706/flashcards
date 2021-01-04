@@ -12,3 +12,7 @@ A small project to help me in learning vocabulary in foreign languages (I'm usin
 - Add an update/delete function to manage cards;
 - Add some kind of session statistics to see how many correct guesses in a row;
 - Tweak the allcards layout to center the cards in the available space.
+  
+  
+  
+##### If you like this project, please do let me know. This is my first attempt at sharing code not attached to programming courses or tutorials.
